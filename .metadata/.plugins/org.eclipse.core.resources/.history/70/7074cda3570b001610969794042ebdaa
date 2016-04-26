@@ -1,0 +1,19 @@
+package j32;
+
+public class j32 extends Thread {
+	int count;
+
+	public void run() {
+
+		System.out.println(count);
+	}
+
+	public static void main() {
+		j32 j32 = new j32();
+		while (j32.count < 10) {
+			j32.start();
+			j32.count++;
+		}
+	}
+
+}

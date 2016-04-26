@@ -1,0 +1,28 @@
+package j32;
+
+public class j32 extends Thread {
+	int count;
+
+	public void run() {
+
+		while(count<10){
+		System.out.println(count);
+		count++;
+		}
+	}
+
+	public static void main(String args[]) {
+		j32 j32 = new j32();
+		while (j32.count <= 10) {
+			j32.start();
+			try {
+				sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			j32.count++;
+		}
+	}
+
+}
